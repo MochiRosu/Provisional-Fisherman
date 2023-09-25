@@ -5,6 +5,7 @@ using UnityEngine;
 public class Harpoon : MonoBehaviour
 {
     public float moveSpeed;
+    public GameObject deadPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class Harpoon : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Instantiate(deadPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
