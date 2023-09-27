@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 475916549573765147}
   - component: {fileID: 2665652362303710129}
   - component: {fileID: 1575563842523035239}
+  - component: {fileID: 7497714541738520575}
   m_Layer: 0
   m_Name: Shark
   m_TagString: Enemy
@@ -180,3 +181,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84790516, y: 0.42059004}
   m_EdgeRadius: 0
+--- !u!114 &7497714541738520575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048851540971457687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1fbff9e78024dc4ebaebaa0dc17968f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jellyfish: {fileID: 4020083336219043613, guid: ef3ecb5a0eaca4d4980bdc95b3843f8c, type: 3}
+  spawnTimer: 0
+  spawnMax: 10
+  spawnMin: 5

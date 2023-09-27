@@ -16,7 +16,7 @@ public class PlayerLives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,18 +25,41 @@ public class PlayerLives : MonoBehaviour
         {
             Destroy(collision.collider.gameObject);
             lives -= 1;
-            for(int i = 0; i < livesUI.Length; i++)
+            for (int i = 0; i < livesUI.Length; i++)
             {
-                if(i < lives)
+                if (i < lives)
                 {
                     livesUI[i].enabled = true;
                 }
                 else
                 {
-                    livesUI[i].enabled=false;
+                    livesUI[i].enabled = false;
                 }
             }
-            if(lives <= 0)
+            if (lives <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Jellyfish")
+        {
+            Destroy(collision.gameObject);
+            lives -= 1;
+            for (int i = 0; i < livesUI.Length; i++)
+            {
+                if (i < lives)
+                {
+                    livesUI[i].enabled = true;
+                }
+                else
+                {
+                    livesUI[i].enabled = false;
+                }
+            }
+            if (lives <= 0)
             {
                 Destroy(gameObject);
             }
