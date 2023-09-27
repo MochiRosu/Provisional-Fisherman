@@ -20,3 +20,6 @@ public class ProjectileShoot : MonoBehaviour
         }
     }
 }
+/* make the sharks able to shoot projectile
+ * make a ramdom shoot time for when the shark shoots*/
+ 
