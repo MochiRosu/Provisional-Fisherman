@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerLives : MonoBehaviour
 {
     public int lives = 3;
@@ -39,6 +40,7 @@ public class PlayerLives : MonoBehaviour
             if (lives <= 0)
             {
                 Destroy(gameObject);
+                
             }
         }
     }
